@@ -1,32 +1,33 @@
 .DS_Store
+Thumbs.db
 
-application/cache/*
-!application/cache/index.html
+# Environment & Local Secrets
+.env
 
-application/logs/*
-!application/logs/index.html
-
-!application/*/.htaccess
-
-composer.lock
-tests/mocks/database/ci_test.sqlite
-
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+# Composer & Dependencies
 /vendor/
+/vendor_ci3_backup/
 
-# IDE Files
-#-------------------------
-/nbproject/
-.idea/*
+# Legacy CI3 Backups
+/application_ci3_backup/
+/system_ci3_backup/
+index_ci3_backup.php
 
-## Sublime Text cache files
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
+# CodeIgniter 4 writable storage
+writable/cache/*
+!writable/cache/index.html
+writable/debugbar/*
+!writable/debugbar/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/session/*
+!writable/session/index.html
+writable/uploads/*
+!writable/uploads/index.html
+
+# IDE & Editor Files
+.idea/
+.vscode/
 *.sublime-project
-/tests/tests/
-/tests/results/
+*.sublime-workspace
+/nbproject/
